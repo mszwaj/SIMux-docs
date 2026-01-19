@@ -1,0 +1,102 @@
+name: Bug Report
+description: Report a bug or issue
+title: "[BUG] "
+labels: ["bug", "need-triage"]
+assignees: []
+
+body:
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does it occur?
+      options:
+        - Always
+        - Sometimes
+        - Once
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the severity/priority of this issue?
+      options:
+        - Critical - System does not work
+        - High - Major functionality broken
+        - Medium - Minor functionality broken
+        - Low - Cosmetic or minor issue
+    validations:
+      required: true
+
+  - type: input
+    id: hw-version
+    attributes:
+      label: Hardware Version
+      description: PCB revision/version number
+      placeholder: "e.g., v0.6.6"
+    validations:
+      required: true
+
+  - type: input
+    id: fw-version
+    attributes:
+      label: Firmware Version
+      description: Firmware version number
+      placeholder: "e.g., v0.6.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe the issue you encountered
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Connect power supply to...
+        2. Press button...
+        3. Observe LED...
+        4. See error
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: Describe what should happen
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Additional environment details
+      placeholder: "Describe yout setup e.g., devices, FPCB used, serial monitor, power input"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or logs
+      placeholder: Attach images, schematics excerpts, scope captures, error logs, etc.
+    validations:
+      required: false
