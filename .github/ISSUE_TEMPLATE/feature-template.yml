@@ -15,10 +15,10 @@ body:
     attributes:
       label: Which part of the project does this feature pertain to?
       options:
-        - Hardware
-        - Firmware
-        - Documentation
-        - Other
+        - label: Hardware
+        - label: Firmware
+        - label: Documentation
+        - label: Other
     validations:
       required: true
 
