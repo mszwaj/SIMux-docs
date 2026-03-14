@@ -54,7 +54,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../product-overview/what-is-simux.html#device-photo-screenshot">Device Photo / Screenshot</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../product-overview/problem-statement.html">Problem Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../product-overview/problem-statement.html">Problem Statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../product-overview/problem-statement.html#the-challenge-manual-sim-card-switching-in-testing-and-development">The Challenge: Manual SIM Card Switching in Testing and Development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../product-overview/problem-statement.html#before-simux">Before SIMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../product-overview/problem-statement.html#who-faces-this-problem">Who Faces This Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../product-overview/problem-statement.html#why-existing-solutions-are-insufficient">Why Existing Solutions Are Insufficient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../product-overview/problem-statement.html#the-simux-solution">The SIMux Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../product-overview/key-features.html">Key Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../product-overview/use-cases.html">Use Cases &amp; Target Users</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../product-overview/use-cases.html#primary-use-cases">Primary Use Cases</a><ul>
@@ -731,6 +740,51 @@
 <li><p>Each board controls one SIM slot in the phone</p></li>
 <li><p>Test all carrier combinations without physical swapping</p></li>
 </ul>
+<section id="setup-example">
+<h4>Setup Example<a class="headerlink" href="#setup-example" title="Link to this heading"></a></h4>
+<p><img alt="Right View" src="../_images/SIMux_2boards_rightview.jpg" />
+<img alt="Left View" src="../_images/SIMux_2boards_leftview.jpg" /></p>
+<video controls width="600">
+   <source src="../_static/videos/SIMux_2boards.mp4" type="video/mp4">
+   Your browser does not support HTML video playback.
+</video>
+<p><strong>Description of filmed usage</strong></p>
+<p><em>Set-up</em></p>
+<ul class="simple">
+<li><p>2 boards stacked-up, each one with 2 SIM cards inserted to slot 1 and 2. Nylon distances and mointing holes used for stack-up</p></li>
+<li><p>Board on the bottom has XIAO SAMD21 mounted</p></li>
+<li><p>SIMux controlled from MobaXterm and powered from the same USB cable</p></li>
+<li><p>Boards connected with Grove cable for I2C communication</p></li>
+<li><p>The bottom board is board0 and it is connected to SIM1 slot on DUT with FPC (flexible Printed Circuit)</p></li>
+<li><p>The top board is board1 and it is connected to SIM2 slot on DUT with FPC</p></li>
+<li><p>Both boards were set for SIM1 slot selection</p></li>
+</ul>
+<p><em>What happened</em>
+Raw MobaXterm view:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SIM0</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Board</span> <span class="mi">0</span> <span class="n">SIM</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">0</span>
+<span class="n">SIM1</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Board</span> <span class="mi">1</span> <span class="n">SIM</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">0</span>
+<span class="n">SIM0</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">Board</span> <span class="mi">0</span> <span class="n">SIM</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">2</span>
+<span class="n">SIM1</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">Board</span> <span class="mi">1</span> <span class="n">SIM</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">2</span>
+<span class="n">SIM0</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">Board</span> <span class="mi">0</span> <span class="n">SIM</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">1</span>
+<span class="n">SIM1</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">Board</span> <span class="mi">1</span> <span class="n">SIM</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Each transition is observed on the video:</p>
+<ul class="simple">
+<li><p>SIM0=0 disabled SIM card in SIM1 slot on DUT</p></li>
+<li><p>SIM1=0 disabled SIM card in SIM2 slot on DUT</p></li>
+<li><p>SIM0=2 enabled SIM card from SIM2 slot on board0 to SIM1 slot on DUT</p></li>
+<li><p>SIM1=2 enabled SIM card from SIM2 slot on board1 to SIM2 slot on DUT</p></li>
+<li><p>SIM0=1 enabled SIM card from SIM1 slot on board0 to SIM1 slot on DUT</p></li>
+<li><p>SIM1=2 enabled SIM card from SIM2 slot on board1 to SIM2 slot on DUT</p></li>
+</ul>
+</section>
 </section>
 <section id="multi-modem-test-rig">
 <h3>Multi-Modem Test Rig<a class="headerlink" href="#multi-modem-test-rig" title="Link to this heading"></a></h3>
@@ -908,6 +962,7 @@
 </tr>
 </tbody>
 </table>
+<p><img alt="SIMux_hw_overview" src="../_images/I2C_DIP_switch_addressing.jpg" /></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Each board must have a unique DIP switch setting.</strong> Address conflicts (two boards with same address) will cause communication failures.</p>

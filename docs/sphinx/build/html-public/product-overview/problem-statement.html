@@ -54,7 +54,16 @@
 <li class="toctree-l3"><a class="reference internal" href="what-is-simux.html#device-photo-screenshot">Device Photo / Screenshot</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Problem Statement</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Problem Statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-challenge-manual-sim-card-switching-in-testing-and-development">The Challenge: Manual SIM Card Switching in Testing and Development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before-simux">Before SIMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#who-faces-this-problem">Who Faces This Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#why-existing-solutions-are-insufficient">Why Existing Solutions Are Insufficient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-simux-solution">The SIMux Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="key-features.html">Key Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="use-cases.html">Use Cases &amp; Target Users</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="use-cases.html#primary-use-cases">Primary Use Cases</a><ul>
@@ -707,16 +716,49 @@
              
   <section id="problem-statement">
 <h1>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading"></a></h1>
-<p>—To Be Added—</p>
-<blockquote>
-<div><p>Suggested content:</p>
+<section id="the-challenge-manual-sim-card-switching-in-testing-and-development">
+<h2>The Challenge: Manual SIM Card Switching in Testing and Development<a class="headerlink" href="#the-challenge-manual-sim-card-switching-in-testing-and-development" title="Link to this heading"></a></h2>
+<section id="before-simux">
+<h3>Before SIMux<a class="headerlink" href="#before-simux" title="Link to this heading"></a></h3>
+<p>Developing, testing, and validating telecom devices and modems traditionally requires:</p>
 <ul class="simple">
-<li><p>The situation before SIMux — what manual SIM-swapping looks like in practice (physical access required, test interruptions, no automation possible)</p></li>
-<li><p>Who faces this problem: telecom developers, modem testers, IoT integrators, QA engineers</p></li>
-<li><p>Why existing solutions are insufficient or absent (commercial SIM banks are expensive/proprietary, manual swapping doesn’t scale)</p></li>
-<li><p>Optional: 1–2 sentences of project origin context</p></li>
+<li><p><strong>Physical SIM Card Swapping</strong>: Engineers must physically remove and insert different SIM cards to test devices with different carriers, networks, or subscriptions. This is time-consuming and error-prone.</p></li>
+<li><p><strong>Test Interruptions</strong>: Each SIM card change requires stopping the test, accessing the device (often difficult with embedded systems) and swapping the card.</p></li>
+<li><p><strong>Multiple Physical Devices</strong>: Testing across multiple SIM cards often means maintaining separate devices for each configuration, significantly increasing equipment costs.</p></li>
+<li><p><strong>No Automation</strong>: Manual swapping cannot be automated, making large-scale testing campaigns and regression testing extremely tedious.</p></li>
+<li><p><strong>Limited Scalability</strong>: Expanding test scope to cover more SIM card scenarios becomes impractical.</p></li>
 </ul>
-</div></blockquote>
+</section>
+<section id="who-faces-this-problem">
+<h3>Who Faces This Problem<a class="headerlink" href="#who-faces-this-problem" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Telecom Equipment Developers</strong>: Building modems, routers, and IoT devices that support multiple carriers</p></li>
+<li><p><strong>Modem and Device Testers</strong>: Quality assurance engineers validating device behavior across different SIM cards and networks</p></li>
+<li><p><strong>IoT Integrators</strong>: Testing IoT solutions that may be deployed with different regional SIM cards</p></li>
+<li><p><strong>Mobile Device Manufacturers</strong>: Validating multi-network capabilities</p></li>
+</ul>
+</section>
+<section id="why-existing-solutions-are-insufficient">
+<h3>Why Existing Solutions Are Insufficient<a class="headerlink" href="#why-existing-solutions-are-insufficient" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Commercial SIM Banks</strong>: Expensive, proprietary, and often require specialized equipment</p></li>
+<li><p><strong>Manual Swapping</strong>: Doesn’t scale and cannot be integrated into CI/CD pipelines</p></li>
+<li><p><strong>Single-Device Testing</strong>: Can only test one SIM configuration at a time</p></li>
+</ul>
+</section>
+<section id="the-simux-solution">
+<h3>The SIMux Solution<a class="headerlink" href="#the-simux-solution" title="Link to this heading"></a></h3>
+<p>SIMux enables <strong>remote, automated SIM card switching</strong> without interrupting the target device. Engineers can now:</p>
+<ul class="simple">
+<li><p>Switch between up to 4 SIM cards via simple serial commands or a physical button</p></li>
+<li><p>Automate SIM switching in test scripts and CI/CD pipelines</p></li>
+<li><p>Test multiple SIM configurations on a single device</p></li>
+<li><p>Reduce equipment costs by eliminating the need for multiple test devices</p></li>
+<li><p>Integrate seamlessly with any OS supporting UART/USB CDC (Windows, Linux, Android)</p></li>
+</ul>
+<p><strong>Result</strong>: Faster development cycles, more comprehensive testing, and significant cost reduction.</p>
+</section>
+</section>
 </section>
 
 
