@@ -305,11 +305,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#reset-device">Reset Device</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#help">Help</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#set-api-mode">Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2c-bus-scan">I2C Bus Scan</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#output-route">Output Route</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#i2c-bus-scan">I2C Bus Scan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#magic-number">Magic Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#toggle-logging">Toggle Logging</a></li>
 </ul>
@@ -344,11 +344,11 @@
 <li class="toctree-l3"><a class="reference internal" href="json-api.html#configuration-commands">Configuration Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#autosave-set-autosave-mode"><code class="docutils literal notranslate"><span class="pre">autosave</span></code> - Set Autosave Mode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#api-set-api-mode"><code class="docutils literal notranslate"><span class="pre">api</span></code> - Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-api.html#i2c-scan-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">i2c_scan</span></code> - Scan I2C Bus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="json-api.html#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#out-toggle-output-route"><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#i2c-scan-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">i2c_scan</span></code> - Scan I2C Bus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#log-set-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging</a></li>
 </ul>
@@ -1014,22 +1014,6 @@ LOG          : Toggle logging on/off
 <li><p>See <a class="reference internal" href="json-api.html"><span class="std std-doc">JSON API</span></a> for JSON command format</p></li>
 </ul>
 </section>
-</section>
-<hr class="docutils" />
-<section id="debug-commands">
-<h2>Debug Commands<a class="headerlink" href="#debug-commands" title="Link to this heading"></a></h2>
-<p>These commands are primarily for development, debugging and troubleshooting.</p>
-<hr class="docutils" />
-<section id="output-route">
-<h3>Output Route<a class="headerlink" href="#output-route" title="Link to this heading"></a></h3>
-<p><strong>Syntax</strong>: <code class="docutils literal notranslate"><span class="pre">OUT</span></code></p>
-<p><strong>Description</strong>: Change output routing (experimental feature).</p>
-<p><strong>Notes</strong>:</p>
-<ul class="simple">
-<li><p>Internal debug feature to change SIM output to 2nd independent socket</p></li>
-<li><p>Not typically needed for normal operation</p></li>
-</ul>
-</section>
 <hr class="docutils" />
 <section id="i2c-bus-scan">
 <h3>I2C Bus Scan<a class="headerlink" href="#i2c-bus-scan" title="Link to this heading"></a></h3>
@@ -1050,6 +1034,22 @@ LOG          : Toggle logging on/off
 <li><p>Verify extension boards are detected</p></li>
 <li><p>Troubleshoot I2C connection issues</p></li>
 <li><p>Detect address changes in runtime</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="debug-commands">
+<h2>Debug Commands<a class="headerlink" href="#debug-commands" title="Link to this heading"></a></h2>
+<p>These commands are primarily for development, debugging and troubleshooting.</p>
+<hr class="docutils" />
+<section id="output-route">
+<h3>Output Route<a class="headerlink" href="#output-route" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong>: <code class="docutils literal notranslate"><span class="pre">OUT</span></code></p>
+<p><strong>Description</strong>: Change output routing (experimental feature).</p>
+<p><strong>Notes</strong>:</p>
+<ul class="simple">
+<li><p>Internal debug feature to change SIM output to 2nd independent socket</p></li>
+<li><p>Not typically needed for normal operation</p></li>
 </ul>
 </section>
 <hr class="docutils" />

@@ -305,11 +305,11 @@
 <li class="toctree-l4"><a class="reference internal" href="cli-commands.html#reset-device">Reset Device</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cli-commands.html#help">Help</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cli-commands.html#set-api-mode">Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cli-commands.html#i2c-bus-scan">I2C Bus Scan</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cli-commands.html#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cli-commands.html#output-route">Output Route</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cli-commands.html#i2c-bus-scan">I2C Bus Scan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cli-commands.html#magic-number">Magic Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cli-commands.html#toggle-logging">Toggle Logging</a></li>
 </ul>
@@ -344,11 +344,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#configuration-commands">Configuration Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#autosave-set-autosave-mode"><code class="docutils literal notranslate"><span class="pre">autosave</span></code> - Set Autosave Mode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#api-set-api-mode"><code class="docutils literal notranslate"><span class="pre">api</span></code> - Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2c-scan-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">i2c_scan</span></code> - Scan I2C Bus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#out-toggle-output-route"><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#i2c-scan-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">i2c_scan</span></code> - Scan I2C Bus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#log-set-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging</a></li>
 </ul>
@@ -1241,38 +1241,6 @@
 <li><p>Default mode is <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
 </ul>
 </section>
-</section>
-<hr class="docutils" />
-<section id="debug-commands">
-<h2>Debug Commands<a class="headerlink" href="#debug-commands" title="Link to this heading"></a></h2>
-<p>These commands are primarily for development, debugging and troubleshooting.</p>
-<section id="out-toggle-output-route">
-<h3><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route<a class="headerlink" href="#out-toggle-output-route" title="Link to this heading"></a></h3>
-<p>Changes output routing (experimental feature).</p>
-<p><strong>Request:</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle_mux1&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Parameters:</strong> None</p>
-<p><strong>Response:</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Board 0 MUX1 toggled to HIGH&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle_mux1&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;board&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Notes:</strong></p>
-<ul class="simple">
-<li><p>Internal debug feature to change SIM output to 2nd independent socket</p></li>
-<li><p>Not typically needed for normal operation</p></li>
-</ul>
-</section>
 <hr class="docutils" />
 <section id="i2c-scan-scan-i2c-bus">
 <h3><code class="docutils literal notranslate"><span class="pre">i2c_scan</span></code> - Scan I2C Bus<a class="headerlink" href="#i2c-scan-scan-i2c-bus" title="Link to this heading"></a></h3>
@@ -1304,6 +1272,38 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">board_found</span></code>: Boards detected</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: Address of the board</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">changed</span></code>: Whether board count changed</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="debug-commands">
+<h2>Debug Commands<a class="headerlink" href="#debug-commands" title="Link to this heading"></a></h2>
+<p>These commands are primarily for development, debugging and troubleshooting.</p>
+<section id="out-toggle-output-route">
+<h3><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route<a class="headerlink" href="#out-toggle-output-route" title="Link to this heading"></a></h3>
+<p>Changes output routing (experimental feature).</p>
+<p><strong>Request:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle_mux1&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong> None</p>
+<p><strong>Response:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Board 0 MUX1 toggled to HIGH&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle_mux1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;board&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Notes:</strong></p>
+<ul class="simple">
+<li><p>Internal debug feature to change SIM output to 2nd independent socket</p></li>
+<li><p>Not typically needed for normal operation</p></li>
 </ul>
 </section>
 <hr class="docutils" />
