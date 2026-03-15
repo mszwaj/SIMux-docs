@@ -350,7 +350,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#out-toggle-output-route"><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#log-set-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#log-toggle-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Toggle Logging</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#error-responses">Error Responses</a><ul>
@@ -1073,6 +1073,11 @@
 <span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Show available commands&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;i2c_scan&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Scan I2C bus for boards&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle_mux1&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">          </span><span class="s2">&quot;board&quot;</span>
@@ -1080,17 +1085,12 @@
 <span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Toggle MUX1 output on specified board (DEBUG)&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;i2c_scan&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Scan I2C bus for boards (DEBUG)&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get_magic&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Show EEPROM magic number (DEBUG)&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle_log&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;log&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Toggle logging on/off (DEBUG)&quot;</span>
 <span class="w">      </span><span class="p">}</span>
@@ -1335,17 +1335,14 @@
 </ul>
 </section>
 <hr class="docutils" />
-<section id="log-set-logging">
-<h3><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging<a class="headerlink" href="#log-set-logging" title="Link to this heading"></a></h3>
-<p>Enables or disables verbose debug logging.</p>
+<section id="log-toggle-logging">
+<h3><code class="docutils literal notranslate"><span class="pre">log</span></code> - Toggle Logging<a class="headerlink" href="#log-toggle-logging" title="Link to this heading"></a></h3>
+<p>Toggles verbose debug logging.</p>
 <p><strong>Request:</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;log&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;on&quot;</span><span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;log&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
-<p><strong>Parameters:</strong></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (string, required): <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code></p></li>
-</ul>
+<p><strong>Parameters:</strong> None</p>
 <p><strong>Response:</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
@@ -1359,6 +1356,9 @@
 </div>
 <p><strong>Notes:</strong></p>
 <ul class="simple">
+<li><p>This command is a toggle; each call flips logging state.</p></li>
+<li><p>No <code class="docutils literal notranslate"><span class="pre">value</span></code> argument is required or parsed.</p></li>
+<li><p>Logging state is saved to flash and persists across <code class="docutils literal notranslate"><span class="pre">RESET</span></code> and power cycle.</p></li>
 <li><p>Changes serial output verbosity</p></li>
 <li><p>Useful for troubleshooting</p></li>
 </ul>
@@ -1438,6 +1438,7 @@
 <li><p>magic number</p></li>
 <li><p>API mode</p></li>
 <li><p>autosave mode</p></li>
+<li><p>logging mode (enabled/disabled)</p></li>
 </ul>
 </li>
 </ul>

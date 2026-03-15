@@ -350,7 +350,7 @@
 <li class="toctree-l3"><a class="reference internal" href="json-api.html#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#out-toggle-output-route"><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json-api.html#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#log-set-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-api.html#log-toggle-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Toggle Logging</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="json-api.html#error-responses">Error Responses</a><ul>
@@ -937,6 +937,10 @@ MAGIC        : Show EEPROM magic number
 LOG          : Toggle logging on/off
 </pre></div>
 </div>
+<p><strong>Build-specific note</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">API=mode</span></code>, <code class="docutils literal notranslate"><span class="pre">OUT</span></code>, <code class="docutils literal notranslate"><span class="pre">MAGIC</span></code>, and <code class="docutils literal notranslate"><span class="pre">LOG</span></code> are debug-only and appear only in debug builds.</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="set-api-mode">
@@ -1088,6 +1092,7 @@ LOG          : Toggle logging on/off
 <p><strong>Notes</strong>:</p>
 <ul class="simple">
 <li><p>Increases serial output verbosity</p></li>
+<li><p>Logging state is saved to flash and persists across <code class="docutils literal notranslate"><span class="pre">RESET</span></code> and power cycle</p></li>
 <li><p>Useful for troubleshooting</p></li>
 </ul>
 </section>
@@ -1126,6 +1131,7 @@ LOG          : Toggle logging on/off
 <li><p>magic number</p></li>
 <li><p>API mode</p></li>
 <li><p>autosave mode</p></li>
+<li><p>logging mode (enabled/disabled)</p></li>
 </ul>
 </li>
 </ul>

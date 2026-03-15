@@ -786,7 +786,7 @@ window.runMermaid = runMermaid;</script>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/json-api.html#debug-commands">Debug Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#out-toggle-output-route"><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#log-set-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#log-toggle-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Toggle Logging</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/json-api.html#error-responses">Error Responses</a><ul>
@@ -1245,6 +1245,7 @@ window.runMermaid = runMermaid;</script>
 <li><p>SIM state for each board (0-7)</p></li>
 <li><p>Autosave mode (on/off)</p></li>
 <li><p>API mode (auto/json/cli)</p></li>
+<li><p>Logging mode (enabled/disabled)</p></li>
 </ul>
 <p><strong>Flash Wear Reduction</strong>:</p>
 <ul class="simple">
@@ -1328,6 +1329,7 @@ window.runMermaid = runMermaid;</script>
 <li><p>SIM states survive power loss</p></li>
 <li><p>Custom serial number persists</p></li>
 <li><p>Boot count increments automatically</p></li>
+<li><p>Logging mode survives RESET and power cycle</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1359,8 +1361,9 @@ window.runMermaid = runMermaid;</script>
 <section id="verbose-logging">
 <h3>4. Verbose Logging<a class="headerlink" href="#verbose-logging" title="Link to this heading"></a></h3>
 <p><strong>Purpose</strong>: Extra debug output for troubleshooting</p>
-<p><strong>Toggle</strong>: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> command or <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:&quot;log&quot;,&quot;value&quot;:&quot;on|off&quot;}</span></code></p>
+<p><strong>Toggle</strong>: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> command or <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:&quot;log&quot;}</span></code></p>
 <p><strong>Output</strong>: Additional messages about I2C transactions, state changes, etc.</p>
+<p><strong>Persistence</strong>: Logging mode is stored in flash and restored on boot.</p>
 </section>
 </section>
 <section id="next-sections">
