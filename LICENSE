@@ -1,153 +1,67 @@
-# PROPRIETARY LICENSE - PRIVATE REPOSITORY
+# PROPRIETARY LICENSE — PUBLIC DOCUMENTATION REPOSITORY
 
-Copyright (c) 2025 Maciej Szwaj (mszwaj). All rights reserved.
+Copyright (c) 2026 Maciej Szwaj (mszwaj). All rights reserved.
 
-## REPOSITORY ACCESS TERMS
+## SCOPE
 
-This is a **private repository** containing proprietary source code, hardware designs, firmware, and documentation (collectively "Materials"). Access is restricted and governed by the terms below.
+This repository contains pre-built HTML documentation and issue templates
+for the SIMux project ("Documentation"). It does not contain source code,
+firmware, hardware designs, or other proprietary Materials from the main
+SIMux repository.
 
-## DEFINITIONS
+## PERMITTED USE
 
-- **"Repository Owner"** means Maciej Szwaj (mszwaj)
-- **"Invited Collaborator"** means any person granted access via GitHub invitation
-- **"Materials"** means all content in this repository including source code, designs, documentation, and related files
-- **"Product"** means any physical device or software incorporating these Materials
+Any person accessing this repository ("Visitor") may:
 
-## ACCESS RIGHTS
+1. **Read** the Documentation for personal or professional reference
+2. **Link** to pages within this Documentation
+3. **Submit** issues or feedback via the provided issue templates
+4. **Download** Documentation pages for personal, offline reference only
 
-### Repository Owner
-The Repository Owner retains all rights and may:
-- Grant or revoke access at any time
-- Modify these terms
-- Use Materials for any purpose including commercial development
-- License Materials to third parties
+## RESTRICTIONS
 
-### Invited Collaborators
-Persons invited to this repository via GitHub invitation are granted **LIMITED ACCESS RIGHTS**:
+Visitors are **PROHIBITED** from:
 
-**PERMITTED ACTIVITIES:**
-1. **View** Materials for the purposes communicated by Repository Owner
-2. **Download** Materials for authorized collaboration only  
-3. **Discuss** Materials with Repository Owner and other authorized collaborators
-4. **Contribute** improvements or modifications if requested
-5. **Test** Materials as directed by Repository Owner
+1. **Reproducing** Documentation content in whole or in substantial part
+2. **Publishing or redistributing** Documentation content on other platforms
+3. **Creating derivative works** based on the Documentation
+4. **Using** Documentation content to manufacture competing products
+5. **Scraping** Documentation for training AI/ML models or datasets
+6. **Removing** copyright notices from any part of the Documentation
 
-**STRICT PROHIBITIONS:**
-1. **Commercial use** without explicit permission
-2. **Manufacturing** products based on Materials
-3. **Creating competing products** using any knowledge gained
-4. **Sharing** Materials outside this repository
-5. **Reverse engineering** for competitive purposes
-6. **Retaining copies** after access revocation
-7. **Granting access** to unauthorized persons
-8. **Public disclosure** of Materials or their contents
-9. **Creating derivative works** for personal or commercial gain
-10. **Using Materials** in other projects without permission
+## ISSUE SUBMISSIONS
 
-## COLLABORATION TERMS
+By submitting an issue to this repository, you agree that:
 
-### Invitation-Based Access
-- Access is granted solely through GitHub repository invitation
-- No separate written agreement is required for basic access
-- Repository Owner may specify additional terms for specific projects
-- Access may be revoked at any time without notice
+- Your submission may be read by the Repository Owner and the public
+- The Repository Owner has no obligation to respond or act on submissions
+- Submissions must not contain confidential information of third parties
 
-### Contributions
-- Any contributions become property of Repository Owner
-- Contributors grant Repository Owner unlimited rights to use contributions
-- Contributors retain no rights to contributed Materials
+## INTELLECTUAL PROPERTY
 
-### Confidentiality
-By accepting invitation, collaborators agree to:
-- Keep all Materials confidential
-- Not discuss Materials with unauthorized persons
-- Protect Materials from unauthorized access
-- Report any suspected breaches immediately
+The Documentation is derived from proprietary Materials. Access to this
+Documentation does not grant any rights to the underlying source code,
+firmware, hardware designs, or trade secrets of the SIMux project.
 
-## END USER RIGHTS (Product Purchasers)
+## NO WARRANTIES
 
-### GRANTED RIGHTS FOR PURCHASED PRODUCTS
-End Users who have **legally purchased** a Product incorporating these Materials are granted the following limited rights:
+The Documentation is provided "AS IS". The Repository Owner makes no
+warranties regarding its accuracy, completeness, or fitness for any purpose.
 
-1. **Use** the Product for its intended purpose
-2. **Operate** the software/firmware as embedded in the Product
-3. **Install updates** provided by the Repository Owner
-4. **Transfer** the Product to another party (transferring these license rights)
-5. **Receive support** as specified in product documentation
+## LIMITATION OF LIABILITY
 
-### END USER RESTRICTIONS
-End Users are **PROHIBITED** from:
+To the extent permitted by law, the Repository Owner shall not be liable
+for any damages arising from use of or reliance on this Documentation.
 
-1. **Reverse engineering** the software/firmware or hardware
-2. **Decompiling, disassembling, or extracting** the software
-3. **Copying** the software separately from the Product
-4. **Modifying** the software or firmware
-5. **Creating derivative works** based on the software
-6. **Redistributing** the software separately from the Product
-7. **Using** the software on unauthorized hardware
-8. **Bypassing** security measures or copy protection
-9. **Manufacturing** competing products based on the hardware design
+## GOVERNING LAW
 
-### PRODUCT WARRANTY
-Products are provided with limited warranty as specified in the product documentation or purchase agreement.
-
-## TERMINATION
-
-### Access Termination
-Repository Owner may terminate access at any time by:
-- Removing collaborator from repository
-- Making repository inaccessible
-- Direct notification
-
-### Upon Termination
-Terminated collaborators must:
-- Immediately cease accessing Materials
-- Delete all local copies of Materials
-- Return or destroy any physical Materials
-- Confirm compliance in writing if requested
-
-## WARRANTIES AND LIABILITY
-
-### No Warranties
-Materials are provided "AS IS" without warranty of any kind.
-
-### Limitation of Liability
-Repository Owner's liability is limited to the extent permitted by law.
-
-### Indemnification
-Collaborators agree to indemnify Repository Owner against any claims arising from their use of Materials.
-
-## LEGAL ENFORCEMENT
-
-### Violations
-Unauthorized use may result in:
-- Immediate access termination
-- Legal action for copyright infringement
-- Claims for monetary damages
-- Injunctive relief
-- Recovery of legal costs
-
-### Jurisdiction
 This license is governed by the laws of Poland.
-
-## MODIFICATIONS
-
-Repository Owner may update these terms at any time. Continued access constitutes acceptance of any modifications.
 
 ## CONTACT
 
-Questions about this license or access requests should be directed to:  
-**maciej.szwaj@gmail.com**
+Questions regarding permitted use: raise an issue in this repository
 
 ---
-
-**NOTICE TO COLLABORATORS:**  
-By accepting the GitHub invitation to this repository, you acknowledge that you have read, understood, and agree to be bound by these terms.
-
-**LEGAL WARNING:**  
-Unauthorized use of these Materials constitutes copyright infringement and may result in civil and criminal penalties.
-
----
-**License Version:** 1.0  
-**Effective Date:** 2025-08-07  
+**License Version:** 2.0  
+**Effective Date:** 2026-04-01  
 **Repository Owner:** Maciej Szwaj
