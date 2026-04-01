@@ -34,7 +34,7 @@
 
           
           
-          <a href="../index_public.html">
+          <a href="../index.html">
             
               <img src="../_static/SIMux_logo.svg" class="logo" alt="Logo"/>
           </a>
@@ -51,18 +51,26 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Product Overview</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="what-is-simux.html">What is SIMux?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="what-is-simux.html#physical-form">Physical Form</a></li>
-<li class="toctree-l3"><a class="reference internal" href="what-is-simux.html#device-photo-screenshot">Device Photo / Screenshot</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="problem-statement.html">Problem Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-statement.html">Problem Statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="problem-statement.html#manual-sim-card-switching-in-testing-and-development">Manual SIM card switching in testing and development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="problem-statement.html#before-simux">Before SIMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="problem-statement.html#who-faces-this-problem">Who Faces This Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="problem-statement.html#why-existing-solutions-are-insufficient">Why Existing Solutions Are Insufficient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="problem-statement.html#the-simux-solution">The SIMux Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="key-features.html">Key Features</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Use Cases &amp; Target Users</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#primary-use-cases">Primary Use Cases</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#automated-sim-switching-in-ci-cd-pipelines">Automated SIM Switching in CI/CD Pipelines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multi-carrier-testing-without-device-reboots">Multi-Carrier Testing Without Device Reboots</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#remote-lab-field-testing">Remote Lab / Field Testing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#standalone-fixed-installation">Standalone Fixed Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dual-sim-device-validation">Dual-SIM Device Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#automated-sim-switching-in-ci-cd-pipelines">Automated SIM switching in CI/CD pipelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-carrier-testing">Multi-Carrier testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remote-lab-field-testing">Remote lab / Field testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standalone-fixed-installation">Standalone fixed installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dual-sim-device-validation">Dual-SIM device validation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#target-user-profile">Target User Profile</a></li>
@@ -75,7 +83,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../getting-started/requirements.html">What’s Needed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/requirements.html">Requirements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/requirements.html#required-items">Required Items</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#essential-hardware">Essential Hardware</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#power-options">Power Options</a></li>
@@ -83,8 +91,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/requirements.html#optional-items">Optional Items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/requirements.html#platform-requirements">Platform Requirements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#windows-tested-on-windows-11">Windows (Tested on Windows 11)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#linux-tested-on-ubuntu-24-04">Linux (Tested on Ubuntu 24.04)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#windows-confirmed-on-windows-11">Windows (confirmed on Windows 11)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#linux-confirmed-on-ubuntu-24-04">Linux (confirmed on Ubuntu 24.04)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#android-tested-on-android-15-and-16">Android (Tested on Android 15 and 16)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/requirements.html#standalone-mode">Standalone Mode</a></li>
 </ul>
@@ -121,7 +129,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/first-connection.html#next-step">Next Step</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../getting-started/control-method.html">Choosing Your Control Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/control-method.html">Control Method</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#available-methods">Available Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#decision-guide">Decision Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#button">Button</a></li>
@@ -132,6 +140,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../getting-started/index.html#steps-at-a-glance">Steps at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/index.html#success-criteria">Success Criteria</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User Guide</a><ul>
@@ -163,7 +172,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/operation.html#next-steps">Next Steps</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/connections.html">Connection Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/connections.html">Connection</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/connections.html#operating-modes">Operating Modes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../user-guide/connections.html#standalone-mode-button-only">Standalone Mode (Button Only)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../user-guide/connections.html#host-controlled-mode-serial-commands">Host-Controlled Mode (Serial Commands)</a></li>
@@ -177,7 +186,6 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/connections.html#linux-configuration">Linux Configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../user-guide/connections.html#using-minicom">Using minicom</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../user-guide/connections.html#using-screen">Using screen</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/connections.html#android-configuration">Android Configuration</a><ul>
@@ -249,14 +257,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/led-indicators.html#sim-indicator-leds-red">SIM Indicator LEDs (Red)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../user-guide/led-indicators.html#led-patterns-reference">LED Patterns Reference</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../user-guide/led-indicators.html#normal-operation-patterns">Normal Operation Patterns</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/led-indicators.html#unexpected-led-behavior">Unexpected LED Behavior</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/index.html#overview">Overview</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api-reference/index.html">API Reference</a><ul>
@@ -293,16 +296,19 @@
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#get-serial-number">Get Serial Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#set-serial-number">Set Serial Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#clear-serial-number">Clear Serial Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#reset-device">Reset Device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#reboot-device">Reboot Device</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#help">Help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#set-autosave-mode">Set Autosave Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#save-state">Save State</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#set-api-mode">Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#i2c-bus-scan">I2C Bus Scan</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/cli-commands.html#debug-commands">Debug Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#output-route">Output Route</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#i2c-bus-scan">I2C Bus Scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#set-output-route">Set Output Route</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#magic-number">Magic Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#toggle-logging">Toggle Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#set-logging">Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/cli-commands.html#flash-dump">Flash Dump</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/cli-commands.html#command-behavior-notes">Command Behavior Notes</a><ul>
@@ -328,20 +334,22 @@
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#get-sn-get-serial-number"><code class="docutils literal notranslate"><span class="pre">get_sn</span></code> - Get Serial Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#set-sn-set-serial-number"><code class="docutils literal notranslate"><span class="pre">set_sn</span></code> - Set Serial Number</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#clear-sn-reset-serial-number-to-mcu-uid"><code class="docutils literal notranslate"><span class="pre">clear_sn</span></code> - Reset Serial Number to MCU UID</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#reset-reset-mcu"><code class="docutils literal notranslate"><span class="pre">reset</span></code> - Reset MCU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#help-get-help"><code class="docutils literal notranslate"><span class="pre">help</span></code> - Get Help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#reboot-reboot-mcu"><code class="docutils literal notranslate"><span class="pre">reboot</span></code> - Reboot MCU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#get-help-get-help"><code class="docutils literal notranslate"><span class="pre">get_help</span></code> - Get Help</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/json-api.html#configuration-commands">Configuration Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#autosave-set-autosave-mode"><code class="docutils literal notranslate"><span class="pre">autosave</span></code> - Set Autosave Mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#api-set-api-mode"><code class="docutils literal notranslate"><span class="pre">api</span></code> - Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#set-autosave-set-autosave-mode"><code class="docutils literal notranslate"><span class="pre">set_autosave</span></code> - Set Autosave Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#save-state-save-state-to-flash"><code class="docutils literal notranslate"><span class="pre">save_state</span></code> - Save State to Flash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#set-api-set-api-mode"><code class="docutils literal notranslate"><span class="pre">set_api</span></code> - Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#scan-i2c-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">scan_i2c</span></code> - Scan I2C Bus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/json-api.html#debug-commands">Debug Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#out-toggle-output-route"><code class="docutils literal notranslate"><span class="pre">out</span></code> - Toggle Output Route</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#i2c-scan-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">i2c_scan</span></code> - Scan I2C Bus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#set-out-set-output-channel"><code class="docutils literal notranslate"><span class="pre">set_out</span></code> - Set Output Channel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#log-set-logging"><code class="docutils literal notranslate"><span class="pre">log</span></code> - Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#set-log-set-logging"><code class="docutils literal notranslate"><span class="pre">set_log</span></code> - Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api-reference/json-api.html#get-flash-dump-dump-flash-data"><code class="docutils literal notranslate"><span class="pre">get_flash_dump</span></code> - Dump Flash Data</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api-reference/json-api.html#error-responses">Error Responses</a><ul>
@@ -381,8 +389,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/specifications.html#power">Power</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/specifications.html#sim-interface">SIM Interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/specifications.html#communication-interfaces">Communication Interfaces</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/specifications.html#multiplexer-specifications">Multiplexer Specifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/specifications.html#gpio-expander-specifications">GPIO Expander Specifications</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/specifications.html#mechanical-specifications">Mechanical Specifications</a><ul>
@@ -390,7 +396,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/specifications.html#mounting">Mounting</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../hardware/specifications.html#component-bill-of-materials">Component Bill of Materials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/specifications.html#next-sections">Next Sections</a></li>
 </ul>
 </li>
@@ -406,7 +411,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/architecture.html#sim-signal-circuit">SIM Signal Circuit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#analog-multiplexers-ts3a27518e">Analog Multiplexers (TS3A27518E)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#analog-multiplexers">Analog Multiplexers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#sim-card-slots">SIM Card Slots</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#fpc-connector">FPC Connector</a></li>
 </ul>
@@ -414,7 +419,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../hardware/architecture.html#i2c-bus-architecture">I2C Bus Architecture</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#addressing-scheme">Addressing Scheme</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#bus-topology">Bus Topology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/architecture.html#communication-flow">Communication Flow</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/architecture.html#power-distribution">Power Distribution</a><ul>
@@ -491,20 +495,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../firmware/overview.html#architecture">Architecture</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#high-level-flow">High-Level Flow</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#software-modules">Software Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#build-system">Build System</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#state-management">State Management</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#i2c-communication">I2C Communication</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#sim-switching-logic">SIM Switching Logic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#button-handling">Button Handling</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#binary-verification">Binary Verification</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../firmware/overview.html#key-features">Key Features</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#state-persistence">1. State Persistence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#autosave-mode">2. Autosave Mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#api-mode-selection">3. API Mode Selection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../firmware/overview.html#verbose-logging">4. Verbose Logging</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../firmware/overview.html#engineering-decisions">Engineering Decisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../firmware/overview.html#validation-snapshot">Validation Snapshot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../firmware/overview.html#next-sections">Next Sections</a></li>
 </ul>
 </li>
@@ -512,7 +511,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../firmware/flashing.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../firmware/flashing.html#obtaining-firmware-binaries">Obtaining Firmware Binaries</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../firmware/flashing.html#official-releases">Official Releases</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../firmware/flashing.html#building-your-own">Building Your Own</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../firmware/flashing.html#bootloader-mode">Bootloader Mode</a><ul>
@@ -557,7 +555,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../troubleshooting/sim-issues.html">SIM Card Issues</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/sim-issues.html#sim-reading-but-modem-can-t-register">SIM Reading But Modem Can’t Register</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/sim-issues.html#sim-not-detected-by-modem-at-all">SIM Not Detected by Modem at All</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/sim-issues.html#sim-works-on-first-selection-but-not-after-switching">SIM Works on First Selection but Not After Switching</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../troubleshooting/led-issues.html">LED Indicator Issues</a><ul>
@@ -576,7 +573,6 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/multi-board-issues.html#only-board-0-works-others-ignored">Only Board 0 Works, Others Ignored</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/multi-board-issues.html#address-conflict">Address Conflict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/multi-board-issues.html#maximum-boards-exceeded-degraded-performance">Maximum Boards Exceeded / Degraded Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../troubleshooting/fpc-issues.html">FPC Cable Issues</a><ul>
@@ -589,13 +585,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/fpc-issues.html#intermittent-connection-sim-drops-out">Intermittent Connection / SIM Drops Out</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/fpc-issues.html#where-to-get-a-replacement-cable">Where to Get a Replacement Cable</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../troubleshooting/command-errors.html">Command Errors</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/command-errors.html#unknown-command-error">“Unknown command” Error</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/command-errors.html#json-parse-error">JSON Parse Error</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/command-errors.html#error-codes-reference">Error Codes Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/command-errors.html#command-timeout-no-response">Command Timeout / No Response</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/command-errors.html#see-also">See Also</a></li>
 </ul>
@@ -603,20 +597,28 @@
 <li class="toctree-l2"><a class="reference internal" href="../troubleshooting/getting-help.html">Getting Further Help</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/getting-help.html#before-reporting-an-issue">Before Reporting an Issue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/getting-help.html#check-documentation-first">Check Documentation First</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/getting-help.html#enable-debug-logging">Enable Debug Logging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../troubleshooting/getting-help.html#reporting-issues">Reporting Issues</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/index.html#quick-diagnosis">Quick Diagnosis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/index.html#approach">Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/index.html#requirements">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../testing/index.html#hardware">Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/index.html#test-coverage">Test Coverage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../testing/index.html#test-results-from-20260331">Test results from 20260331</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../testing/index.html#what-is-validated">What is validated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../testing/index.html#debug-only-tests">Debug-only tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/index.html#running-tests">Running Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/index.html#test-markers">Test Markers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../appendices/index.html">Appendices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendices/quick-reference.html">Quick Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../appendices/quick-reference.html#all-cli-commands">All CLI Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../appendices/quick-reference.html#most-common-json-payloads">Most Common JSON Payloads</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../appendices/quick-reference.html#error-codes">Error Codes</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../appendices/external-resources.html">External Resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/external-resources.html#standards">Standards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/external-resources.html#hardware-mcu-resources">Hardware &amp; MCU Resources</a></li>
@@ -626,8 +628,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../appendices/support-contact.html">Support &amp; Contact</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/support-contact.html#reporting-issues">Reporting Issues</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../appendices/support-contact.html#what-is-supported">What Is Supported</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../appendices/support-contact.html#what-is-not-supported">What Is NOT Supported</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/support-contact.html#repository">Repository</a></li>
 </ul>
 </li>
@@ -676,7 +676,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../appendices/license.html#navigation">Navigation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../appendices/index.html#contents">Contents</a></li>
 </ul>
 </li>
 </ul>
@@ -687,14 +686,14 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index_public.html">SIMux</a>
+          <a href="../index.html">SIMux</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index_public.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Product Overview</a></li>
       <li class="breadcrumb-item active">Use Cases &amp; Target Users</li>
       <li class="wy-breadcrumbs-aside">
@@ -710,38 +709,38 @@
 <section id="primary-use-cases">
 <h2>Primary Use Cases<a class="headerlink" href="#primary-use-cases" title="Link to this heading"></a></h2>
 <section id="automated-sim-switching-in-ci-cd-pipelines">
-<h3>Automated SIM Switching in CI/CD Pipelines<a class="headerlink" href="#automated-sim-switching-in-ci-cd-pipelines" title="Link to this heading"></a></h3>
+<h3>Automated SIM switching in CI/CD pipelines<a class="headerlink" href="#automated-sim-switching-in-ci-cd-pipelines" title="Link to this heading"></a></h3>
 <p><strong>User</strong>: Telecom software developer or QA engineer<br />
 <strong>Problem</strong>: Tests against multiple carriers require physical SIM swaps, breaking automation<br />
 <strong>How SIMux helps</strong>: JSON API or CLI commands switch SIMs programmatically with physical connection</p>
 </section>
 <hr class="docutils" />
-<section id="multi-carrier-testing-without-device-reboots">
-<h3>Multi-Carrier Testing Without Device Reboots<a class="headerlink" href="#multi-carrier-testing-without-device-reboots" title="Link to this heading"></a></h3>
+<section id="multi-carrier-testing">
+<h3>Multi-Carrier testing<a class="headerlink" href="#multi-carrier-testing" title="Link to this heading"></a></h3>
 <p><strong>User</strong>: Modem/IoT device developer<br />
 <strong>Problem</strong>: Verifying network behaviour across carriers requires manually swapping SIMs and waiting for device re-registration<br />
-<strong>How SIMux helps</strong>: Up to 4 SIMs in one board; re-registration done automaticallyby target device</p>
+<strong>How SIMux helps</strong>: Up to 4 SIMs in one board; re-registration done automaticallyby target device after SIM card switched on SIMux</p>
 </section>
 <hr class="docutils" />
 <section id="remote-lab-field-testing">
-<h3>Remote Lab / Field Testing<a class="headerlink" href="#remote-lab-field-testing" title="Link to this heading"></a></h3>
+<h3>Remote lab / Field testing<a class="headerlink" href="#remote-lab-field-testing" title="Link to this heading"></a></h3>
 <p><strong>User</strong>: Field engineer or remote test-setup operator
 <strong>Problem</strong>: Physical access to SIM slots is not possible during remote sessions
-<strong>How SIMux helps</strong>: Board connected to a remote host (PC, Raspberry Pi, Android) allows full SIM connection over SSH/serial without touching the hardware</p>
+<strong>How SIMux helps</strong>: Board connected to a remote host (ex. PC, Raspberry Pi) allows full SIM connection state management over SSH/serial without touching the hardware</p>
 </section>
 <hr class="docutils" />
 <section id="standalone-fixed-installation">
-<h3>Standalone Fixed Installation<a class="headerlink" href="#standalone-fixed-installation" title="Link to this heading"></a></h3>
-<p><strong>User</strong>: Operator needing periodic manual SIM switching without a PC<br />
+<h3>Standalone fixed installation<a class="headerlink" href="#standalone-fixed-installation" title="Link to this heading"></a></h3>
+<p><strong>User</strong>: Operator needing periodic manual SIM switching without a PC
 <strong>Problem</strong>: No host device available at installation site<br />
 <strong>How SIMux helps</strong>: Powered by any 5V USB charger; button cycles through SIMs independently</p>
 </section>
 <hr class="docutils" />
 <section id="dual-sim-device-validation">
-<h3>Dual-SIM Device Validation<a class="headerlink" href="#dual-sim-device-validation" title="Link to this heading"></a></h3>
+<h3>Dual-SIM device validation<a class="headerlink" href="#dual-sim-device-validation" title="Link to this heading"></a></h3>
 <p><strong>User</strong>: QA engineer testing a dual-SIM phone or modem<br />
 <strong>Problem</strong>: Need to test all combinations of 2 SIM slots × multiple carriers<br />
-<strong>How SIMux helps</strong>: Two boards (one per SIM slot) daisy-chained via I2C; control both slots independently from a single host connection</p>
+<strong>How SIMux helps</strong>: Two boards (one per SIM slot) daisy-chained via I2C; control both slots independently from a single host connection. Possibility to test all 25 combinations for dual-SIM device without touching SIM cards during test process</p>
 </section>
 </section>
 <hr class="docutils" />
