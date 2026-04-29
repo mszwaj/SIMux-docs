@@ -6,13 +6,13 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CLI Commands &mdash; SIMux 0.6.6 documentation</title>
+  <title>Text Command Interface &mdash; SIMux 0.6.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
 
   
-    <link rel="canonical" href="https://mszwaj.github.io/SIMux-docs/docs/api-reference/cli-commands.html" />
+    <link rel="canonical" href="https://mszwaj.github.io/SIMux-docs/docs/api-reference/text-interface.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=d129ce28"></script>
@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="JSON API" href="json-api.html" />
+    <link rel="next" title="JSON Interface" href="json-interface.html" />
     <link rel="prev" title="Protocol Overview" href="overview.html" /> 
 </head>
 
@@ -134,8 +134,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#available-methods">Available Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#decision-guide">Decision Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#button">Button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#cli">CLI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#json-api">JSON API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#text-command-interface">Text Command Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#json-interface">JSON Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#api-mode-setting">API Mode Setting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/control-method.html#next-step">Next Step</a></li>
 </ul>
@@ -244,7 +244,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../user-guide/multi-board.html#wrong-board-responding">Wrong Board Responding</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../user-guide/multi-board.html#advanced-json-api-with-multiple-boards">Advanced: JSON API with Multiple Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/multi-board.html#advanced-json-interface-with-multiple-boards">Advanced: JSON Interface with Multiple Boards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/multi-board.html#next-steps">Next Steps</a></li>
 </ul>
 </li>
@@ -265,13 +265,13 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Protocol Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#cli-command-line-interface">CLI (Command-Line Interface)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#json">JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#text-command-interface-command-line-interface">Text Command Interface (Command-Line Interface)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#json-interface">JSON Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="overview.html#serial-communication-settings">Serial Communication Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="overview.html#connection-workflow">Connection Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="overview.html#response-behavior">Response Behavior</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="overview.html#cli-commands">CLI Commands</a></li>
-<li class="toctree-l4"><a class="reference internal" href="overview.html#json-api">JSON API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overview.html#text-command-interface">Text Command Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overview.html#json-interface-response-format">JSON Interface (Response Format)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="overview.html#command-processing">Command Processing</a><ul>
@@ -285,7 +285,7 @@
 <li class="toctree-l3"><a class="reference internal" href="overview.html#next-sections">Next Sections</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">CLI Commands</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Text Command Interface</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sim-control-commands">SIM Control Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#select-sim-quick-main-board-only">Select SIM (Quick - Main Board Only)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#select-sim-specific-board">Select SIM (Specific Board)</a></li>
@@ -322,54 +322,54 @@
 <li class="toctree-l3"><a class="reference internal" href="#next-sections">Next Sections</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="json-api.html">JSON API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#general-response-format">General Response Format</a></li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#sim-control-commands">SIM Control Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#set-sim-select-sim-on-board"><code class="docutils literal notranslate"><span class="pre">set_sim</span></code> - Select SIM on Board</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#get-state-get-current-device-state"><code class="docutils literal notranslate"><span class="pre">get_state</span></code> - Get Current Device State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json-interface.html">JSON Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#general-response-format">General Response Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#sim-control-commands">SIM Control Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#set-sim-select-sim-on-board"><code class="docutils literal notranslate"><span class="pre">set_sim</span></code> - Select SIM on Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#get-state-get-current-device-state"><code class="docutils literal notranslate"><span class="pre">get_state</span></code> - Get Current Device State</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#system-information-commands">System Information Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#get-info-get-device-information"><code class="docutils literal notranslate"><span class="pre">get_info</span></code> - Get Device Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#get-sn-get-serial-number"><code class="docutils literal notranslate"><span class="pre">get_sn</span></code> - Get Serial Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#set-sn-set-serial-number"><code class="docutils literal notranslate"><span class="pre">set_sn</span></code> - Set Serial Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#clear-sn-reset-serial-number-to-mcu-uid"><code class="docutils literal notranslate"><span class="pre">clear_sn</span></code> - Reset Serial Number to MCU UID</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#reboot-reboot-mcu"><code class="docutils literal notranslate"><span class="pre">reboot</span></code> - Reboot MCU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#get-help-get-help"><code class="docutils literal notranslate"><span class="pre">get_help</span></code> - Get Help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#system-information-commands">System Information Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#get-info-get-device-information"><code class="docutils literal notranslate"><span class="pre">get_info</span></code> - Get Device Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#get-sn-get-serial-number"><code class="docutils literal notranslate"><span class="pre">get_sn</span></code> - Get Serial Number</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#set-sn-set-serial-number"><code class="docutils literal notranslate"><span class="pre">set_sn</span></code> - Set Serial Number</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#clear-sn-reset-serial-number-to-mcu-uid"><code class="docutils literal notranslate"><span class="pre">clear_sn</span></code> - Reset Serial Number to MCU UID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#reboot-reboot-mcu"><code class="docutils literal notranslate"><span class="pre">reboot</span></code> - Reboot MCU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#get-help-get-help"><code class="docutils literal notranslate"><span class="pre">get_help</span></code> - Get Help</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#configuration-commands">Configuration Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#set-autosave-set-autosave-mode"><code class="docutils literal notranslate"><span class="pre">set_autosave</span></code> - Set Autosave Mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#save-state-save-state-to-flash"><code class="docutils literal notranslate"><span class="pre">save_state</span></code> - Save State to Flash</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#set-api-set-api-mode"><code class="docutils literal notranslate"><span class="pre">set_api</span></code> - Set API Mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#scan-i2c-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">scan_i2c</span></code> - Scan I2C Bus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#configuration-commands">Configuration Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#set-autosave-set-autosave-mode"><code class="docutils literal notranslate"><span class="pre">set_autosave</span></code> - Set Autosave Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#save-state-save-state-to-flash"><code class="docutils literal notranslate"><span class="pre">save_state</span></code> - Save State to Flash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#set-api-set-api-mode"><code class="docutils literal notranslate"><span class="pre">set_api</span></code> - Set API Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#scan-i2c-scan-i2c-bus"><code class="docutils literal notranslate"><span class="pre">scan_i2c</span></code> - Scan I2C Bus</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#debug-commands">Debug Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#set-out-set-output-channel"><code class="docutils literal notranslate"><span class="pre">set_out</span></code> - Set Output Channel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#set-log-set-logging"><code class="docutils literal notranslate"><span class="pre">set_log</span></code> - Set Logging</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#get-flash-dump-dump-flash-data"><code class="docutils literal notranslate"><span class="pre">get_flash_dump</span></code> - Dump Flash Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#debug-commands">Debug Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#set-out-set-output-channel"><code class="docutils literal notranslate"><span class="pre">set_out</span></code> - Set Output Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#get-magic-get-magic-number"><code class="docutils literal notranslate"><span class="pre">get_magic</span></code> - Get Magic Number</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#set-log-set-logging"><code class="docutils literal notranslate"><span class="pre">set_log</span></code> - Set Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#get-flash-dump-dump-flash-data"><code class="docutils literal notranslate"><span class="pre">get_flash_dump</span></code> - Dump Flash Data</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#error-responses">Error Responses</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#unknown-command">Unknown Command</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#missing-required-parameter">Missing Required Parameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#invalid-parameter-value">Invalid Parameter Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#error-responses">Error Responses</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#unknown-command">Unknown Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#missing-required-parameter">Missing Required Parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#invalid-parameter-value">Invalid Parameter Value</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#usage-notes">Usage Notes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#concurrent-use">Concurrent Use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#state-persistence">State Persistence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json-api.html#case-sensitivity">Case Sensitivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#usage-notes">Usage Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#concurrent-use">Concurrent Use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#state-persistence">State Persistence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json-interface.html#case-sensitivity">Case Sensitivity</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="json-api.html#next-sections">Next Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json-interface.html#next-sections">Next Sections</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="quick-reference.html">Quick Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="quick-reference.html#cli-commands-all-commands">CLI Commands — All Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick-reference.html#text-command-interface-all-commands">Text Command Interface — All Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quick-reference.html#most-common-json-payloads">Most Common JSON Payloads</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quick-reference.html#error-codes">Error Codes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quick-reference.html#led-states">LED States</a></li>
@@ -379,7 +379,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#quick-reference">Quick Reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="index.html#basic-sim-control">Basic SIM Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#system-commands">System Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#json-api">JSON API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#json-interface">JSON Interface</a></li>
 </ul>
 </li>
 </ul>
@@ -651,6 +651,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#p">P</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#r">R</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#s">S</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#t">T</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#u">U</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#v">V</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendices/glossary.html#x">X</a></li>
@@ -696,7 +697,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
-      <li class="breadcrumb-item active">CLI Commands</li>
+      <li class="breadcrumb-item active">Text Command Interface</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -705,8 +706,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="cli-commands">
-<h1>CLI Commands<a class="headerlink" href="#cli-commands" title="Link to this heading"></a></h1>
+  <section id="text-command-interface">
+<h1>Text Command Interface<a class="headerlink" href="#text-command-interface" title="Link to this heading"></a></h1>
 <p>Human-friendly text commands for interactive terminal control.</p>
 <section id="sim-control-commands">
 <h2>SIM Control Commands<a class="headerlink" href="#sim-control-commands" title="Link to this heading"></a></h2>
@@ -995,17 +996,18 @@ FLASHDUMP    : Dump raw flash (MyData) structure
 <section id="set-api-mode">
 <h3>Set API Mode<a class="headerlink" href="#set-api-mode" title="Link to this heading"></a></h3>
 <p><strong>Syntax</strong>: <code class="docutils literal notranslate"><span class="pre">API=&lt;mode&gt;</span></code></p>
-<p><strong>Description</strong>: Switch between CLI and JSON input and output formats.</p>
+<p><strong>Description</strong>: Switch between Text Command and JSON input and output formats.</p>
 <p><strong>Parameters</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;mode&gt;</span></code>: API mode selector</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">AUTO</span></code> - Auto-detect format based on input (default)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">JSON</span></code> - Force JSON input and output</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CLI</span></code> - Force human-readable CLI input and output</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLI</span></code> - Force human-readable Text Command input and output</p></li>
 </ul>
 </li>
 </ul>
+<p><strong>Set via Text Command Interface:</strong></p>
 <p><strong>Examples</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">API</span><span class="o">=</span><span class="n">JSON</span>
 <span class="n">API</span> <span class="n">mode</span> <span class="nb">set</span> <span class="n">to</span><span class="p">:</span> <span class="n">JSON</span>
@@ -1029,8 +1031,8 @@ FLASHDUMP    : Dump raw flash (MyData) structure
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AUTO</span></code></p></td>
-<td><p>CLI command</p></td>
-<td><p>CLI response</p></td>
+<td><p>Text command</p></td>
+<td><p>Text response</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AUTO</span></code></p></td>
 <td><p>JSON command</p></td>
@@ -1041,30 +1043,30 @@ FLASHDUMP    : Dump raw flash (MyData) structure
 <td><p>JSON response</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">JSON</span></code></p></td>
-<td><p>CLI command</p></td>
-<td><p>ERROR: CLI input not allowed in JSON mode</p></td>
+<td><p>Text command</p></td>
+<td><p>ERROR: Text input not allowed in JSON mode</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CLI</span></code></p></td>
-<td><p>CLI command</p></td>
-<td><p>CLI response</p></td>
+<td><p>Text command</p></td>
+<td><p>Text response</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CLI</span></code></p></td>
 <td><p>JSON command</p></td>
-<td><p>ERROR: JSON input not allowed in CLI mode</p></td>
+<td><p>ERROR: JSON input not allowed in Text Command Interface mode</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Use Cases</strong>:</p>
 <ul class="simple">
 <li><p><strong>JSON mode</strong>: For programmatic control and parsing</p></li>
-<li><p><strong>CLI mode</strong>: For human-readable terminal interaction</p></li>
-<li><p><strong>AUTO mode</strong>: Flexibility to mix CLI and JSON commands</p></li>
+<li><p><strong>Text Command Interface mode</strong>: For human-readable terminal interaction</p></li>
+<li><p><strong>AUTO mode</strong>: Flexibility to mix Text Command Interface and JSON Interface commands</p></li>
 </ul>
 <p><strong>Notes</strong>:</p>
 <ul class="simple">
 <li><p>Mode persists over power loss and reboots, saved to flash</p></li>
 <li><p>Default mode is <code class="docutils literal notranslate"><span class="pre">AUTO</span></code></p></li>
-<li><p>See <a class="reference internal" href="json-api.html"><span class="std std-doc">JSON API</span></a> for JSON command format</p></li>
+<li><p>See <a class="reference internal" href="json-interface.html"><span class="std std-doc">JSON Interface</span></a> for JSON command format</p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1203,7 +1205,7 @@ FLASHDUMP    : Dump raw flash (MyData) structure
 <section id="case-sensitivity">
 <h3>Case Sensitivity<a class="headerlink" href="#case-sensitivity" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>All CLI commands are <strong>case-insensitive</strong></p></li>
+<li><p>All Text Command Interface commands are <strong>case-insensitive</strong></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">INFO</span></code> = <code class="docutils literal notranslate"><span class="pre">info</span></code> = <code class="docutils literal notranslate"><span class="pre">InFo</span></code></p></li>
 </ul>
 </section>
@@ -1240,7 +1242,7 @@ FLASHDUMP    : Dump raw flash (MyData) structure
 <section id="next-sections">
 <h2>Next Sections<a class="headerlink" href="#next-sections" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="json-api.html"><span class="std std-doc">JSON API</span></a></strong> - Programmatic control interface</p></li>
+<li><p><strong><a class="reference internal" href="json-interface.html"><span class="std std-doc">JSON Interface</span></a></strong> - Programmatic control interface</p></li>
 </ul>
 </section>
 </section>
@@ -1250,7 +1252,7 @@ FLASHDUMP    : Dump raw flash (MyData) structure
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="overview.html" class="btn btn-neutral float-left" title="Protocol Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="json-api.html" class="btn btn-neutral float-right" title="JSON API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="json-interface.html" class="btn btn-neutral float-right" title="JSON Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
